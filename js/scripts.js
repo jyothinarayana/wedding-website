@@ -252,11 +252,6 @@ function initMap() {
     map,
     label: "Temple Tree Farms",
   });
-
-    // var marker = new google.maps.Marker({
-    //     position: location,
-    //     map: map
-    // });
 }
 
 function initBBSRMap() {
