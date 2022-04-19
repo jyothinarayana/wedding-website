@@ -239,22 +239,7 @@ $(document).ready(function () {
 
 /********************** Extras **********************/
 
-// Google map
 function initMap() {
-  const myLatLng = { lat: -25.363, lng: 131.044 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: myLatLng,
-  });
-
-  new google.maps.Marker({
-    position: myLatLng,
-    map,
-    title: "Hello World!",
-  });
-}
-
-function initOldMap() {
     var location = {lat: 13.069165715268284, lng: 77.58513966849976};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
@@ -262,10 +247,11 @@ function initOldMap() {
         scrollwheel: false
     });
 
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
+    new google.maps.Marker({
+    position: location,
+    map,
+    label: "Temple Tree Farms",
+  });
 }
 
 function initBBSRMap() {
@@ -281,6 +267,8 @@ function initBBSRMap() {
         map: map
     });
 }
+
+window.initMap = initMap
 
 // alert_markup
 function alert_markup(alert_type, msg) {
