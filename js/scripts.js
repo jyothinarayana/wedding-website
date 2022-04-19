@@ -247,10 +247,16 @@ function initMap() {
         scrollwheel: false
     });
 
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
+    new google.maps.Marker({
+    position: location,
+    map,
+    label: "Temple Tree Farms",
+  });
+
+    // var marker = new google.maps.Marker({
+    //     position: location,
+    //     map: map
+    // });
 }
 
 function initBBSRMap() {
@@ -266,6 +272,8 @@ function initBBSRMap() {
         map: map
     });
 }
+
+window.initMap = initMap
 
 // alert_markup
 function alert_markup(alert_type, msg) {
